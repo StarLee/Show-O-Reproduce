@@ -1,5 +1,5 @@
-# Show-O-Reproduce
-复现Show-O的训练与推理
+
+
 # 0，提前说明
 ## 0.1 项目说明
 + 复现 Show-O 统一多模型模型的训练与推理过程
@@ -600,13 +600,13 @@ accelerate launch --config_file /home/ubuntu/codespace/llm/Show-o/accelerate_con
 <!-- 这是一张图片，ocr 内容为：ORIGINAL IMAGES V.S.RECONSTRUCTED IMAGES V.S.PREDICTED IMAGES D TICK IN SD A FROR TH BO MASK RATIO:0.57 CAPTION:HARTEBEEST MASK RATIO:0.93 COPTION:RAIN BARREL GENERATED IMAGES WALL CLOCK LIGER -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/46373454/1767928546765-405c3e9a-2fd6-477b-bb1e-dbc6eb2a4858.png)
 
-# 1， 推理
-# 1.1 说明
+# 2， 推理
+## 2.1 说明
 + 模型推理的测试结果均在 results 下，分别为 mmu(图片理解)，inpainting(图片补全)，extrapolation(图片扩展),t2i(文生图)
 + 执行脚本均在 inference 下对应的 shell 脚本
 + 同时会在 wandb 上也会生成相关结果
 
-## 1.2 mmu
+## 2.2 mmu
 ```python
 #!/bin/bash
 #cd /home/ubuntu/codespace/llm/Show-o ; 
@@ -623,7 +623,7 @@ mmu_image_root=./mmu_validation question='Please describe this image in detail. 
 
 输出时，理解的内容在 results/mmu 下 对应的 txt 文件
 
-## 1.3 t2i
+## 2.3 t2i
 ```python
 #!/bin/bash
 #cd /home/ubuntu/codespace/llm/Show-o ; 
@@ -638,7 +638,7 @@ mode='t2i'
 
 说明：输入 prompt 为 validation_prompts/showoprompts.txt 文件
 
-## 1.4 inpainting 
+## 2.4 inpainting 
 ```python
 #!/bin/bash
 #cd /home/ubuntu/codespace/llm/Show-o ; 
@@ -654,7 +654,7 @@ image_path=./inpainting_validation/bus.jpg inpainting_mask_path=./inpainting_val
 
 说明：输入图片为inpainting_validation/bus.jpg，mask 部分在inpainting_validation/bus_mask.webp, prompt 为'A blue sports car with sleek curves and tinted windows, parked on a bustling city street.'
 
-## 1.5 extrapolation
+## 2.5 extrapolation
 ```python
 #!/bin/bash
 #cd /home/ubuntu/codespace/llm/Show-o ; 
