@@ -12,3 +12,8 @@ cp -R ../Show-o/models ./
 cp -R ../Show-o/training ./
 cp -R ../Show-o/parquet ./
 cp ../Show-o/requirements.txt ./
+cp -R ../Show-o/datasets/imagenet-1k-samples/trans.py ./datasets/imagenet-1k-samples/
+cp -R ../Show-o/datasets/SAM-LLaVA-Captions10M/tar_2_json.py ./datasets/SAM-LLaVA-Captions10M/
+cp -R ../Show-o/datasets/SAM-LLaVA-Captions10M/tar_2_s3.py ./datasets/SAM-LLaVA-Captions10M/
+
+
